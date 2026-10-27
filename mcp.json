@@ -1,0 +1,51 @@
+{
+  "mcpServers": {
+    "avengers-ai": {
+      "tools": [
+        {
+          "name": "convene_avengers_council",
+          "description": "Convenes multi-hero quorum consensus for planetary threat neutralization",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "threat_signature": {
+                "type": "string"
+              },
+              "urgency_level": {
+                "type": "string",
+                "enum": [
+                  "ELEVATED",
+                  "OMEGA",
+                  "EXTINCTION"
+                ]
+              }
+            },
+            "required": [
+              "threat_signature",
+              "urgency_level"
+            ]
+          }
+        },
+        {
+          "name": "activate_planetary_defense",
+          "description": "Deploys automated Stark-reactor energy shields and PQC communication grid",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "grid_sector": {
+                "type": "string"
+              },
+              "energy_gw": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "grid_sector",
+              "energy_gw"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
